@@ -43,9 +43,9 @@ if you are using mac or linux you have to instead use the following code:
     }
 ```
 
-- call the gotoxy(...) function to print the phrase " hello" at position (5,5). 
+- test the `gotoxy(...)` by calling it to print the phrase `"hello"` at position `(5,5)`. 
 
-- use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
+- remove that `hello` and use the function `gotoxy(....)`  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
 hint:
 ```cpp
 	for(......){
