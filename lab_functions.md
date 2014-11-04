@@ -9,7 +9,7 @@ note1: you will submit the result of the lab to bb at the end.
 - make g a  global constant 
 - add the prototype of this function above main()  and move  the actual function below main(). 
 
-- now call function with the following values t=0, t=0.1, t=0.2 ...., t=4 using a for loop and with the value v=20 for initial speed. 
+- now call function with the following values `t=0`, `t=0.1`, `t=0.2, ...., t=4` using a for loop and with the value v=20 for initial speed. 
 basically you place the function call inside the for loop. just print the returned value. 
 
 Making it visual
