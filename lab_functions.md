@@ -26,10 +26,32 @@ this function enables us to print a character at the specified position on conso
 - call the gotoxy(...) function to print the phrase " hello" at position (5,5). 
 
 - use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
-
+hint:
+```cpp
+		double loc=positionUnderGravity(20,t);
+		gotoxy(i++,loc); 
+		cout<<"o";
+```
 - convert the value returning function `positionUnderGravity(...)` to a void function.  add an argument called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
-- send the value `t` to the function `positionUnderGravity(...)` using a global variable. 
+- send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practive but I just wanted you to try it.). you can change it back once you try this. 
 
+Additional parts (not mandatory)
+=============
+- create a function `positionUnderCircularMotion(t)` that returns two values `x`,`y` through 'passing by reference'. 
+use the formulas:
+x=20+10*cos(t)
+y=20+10*sin(t); 
+to calculate x and y.
 
+- test the function by passing the following to the function
+```code
+void circle(int numVertices){
+	double t=0;
+	for(int i=0;i<numVertices; i++){
+		 t+=2*3.14/numVertices;
+		gotoxy(20+10*cos(t),20+10*sin(t)); 
+		cout<<"o";
+	}
+}
 
