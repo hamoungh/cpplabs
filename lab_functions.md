@@ -44,18 +44,9 @@ Additional parts (not mandatory)
 =============
 - create a function `positionUnderCircularMotion(t)` that returns two values `x`,`y` through 'passing by reference'. 
 use the formulas:
+```
 x=20+10*cos(t)
 y=20+10*sin(t); 
+```
 to calculate x and y.
-
-- test the function by passing the following to the function
-```code
-void circle(int numVertices){
-	double t=0;
-	for(int i=0;i<numVertices; i++){
-		 t+=2*3.14/numVertices;
-		gotoxy(20+10*cos(t),20+10*sin(t)); 
-		cout<<"o";
-	}
-}
 
