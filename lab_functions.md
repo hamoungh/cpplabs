@@ -10,7 +10,10 @@ note1: you will submit the result of the lab to bb at the end.
 - add the prototype of this function above main()  and move  the actual function below main(). 
 
 - now call function with the following values t=0, t=0.1, t=0.2 ...., t=4 using a for loop and with the value v=20 for initial speed. 
+basically you place the function call inside the for loop. just print the returned value. 
 
+Making it visual
+===============
 - add the following header to file:
 `#include <windows.h>`
 also add the following void function to your program:
@@ -35,8 +38,8 @@ hint:
 		cout<<"o";
 	}
 ```
-- cut  the above code in a separate void function 
-- convert the value returning function `positionUnderGravity(...)` to a void function.  add an argument called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
+- cut/paste  the above code into a separate void function called `void ballPath()` and call `ballPath()` in the `main()`.
+- convert the value returning function `positionUnderGravity(...)` to a void function.  Add an argument called `position` to the function. use this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
 - send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practice but I just want you to try it. you can change it back once you try it. )
 
