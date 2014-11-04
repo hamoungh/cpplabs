@@ -28,6 +28,21 @@ void gotoxy( int x, int y )
 this function enables us to print a character at the specified position on console window.
 if including `windows.h` gives you an error, try visual studio 2013.
 
+if you are using mac or linux you have to instead use the following code:
+```cpp
+  #include <unistd.h>
+  #include <term.h>
+
+  void gotoxy( int x, int y )
+    {
+    int err;
+    if (!cur_term)
+      if (setupterm( NULL, STDOUT_FILENO, &err ) == ERR)
+        return;
+    putp( tparm( tigetstr( "cup" ), y, x, 0, 0, 0, 0, 0, 0, 0 ) );
+    }
+```
+
 - call the gotoxy(...) function to print the phrase " hello" at position (5,5). 
 
 - use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
@@ -40,11 +55,16 @@ hint:
 	}
 ```
 - cut/paste  the above code into a separate void function called `void ballPath()` and call `ballPath()` in the `main()`.
-- convert the value returning function `positionUnderGravity(...)` to a void function.  Add an argument called `position` to the function. use this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
-- send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practice but I just want you to try it. you can change it back once you try it. )
+Testing variable passing by reference 
+======================
+- convert the value returning function `positionUnderGravity(...)` to a void function called ``positionUnderGravityByRef(...)`.  Add an argument called `position` to the function. use this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
-Additional parts (not mandatory)
+Testing global variables  
+======================
+-make a function `double positionUnderGravityByGlobal(...)` and send the value `t` to this function using a global variable. (this is a bad practice but I just want you to try it. you can get rid of this function:) )
+
+Testing Circular Motion (not mandatory for the lab)
 =============
 - create a function `void positionUnderCircularMotion(double t,double& x,double& y)` that returns two values `x`,`y` through 'passing by reference'. 
 use the formulas:
@@ -56,7 +76,7 @@ to calculate x and y.
 note that the argument to sin() and cos() represents an angle and is expressed in radians.
 One radian is equivalent to 180/PI degrees. 
 
-- test your function with some values
+- test your function with some values such 
 - create a void function called `circle` (i.e. `void circle()`) that generates 100 angles between `0` and `2*Pi` using the formula
 `t = 2 * 3.13 *i / 100;`
 pass these `t` values to `positionUnderCircularMotion` and draw the result. 
