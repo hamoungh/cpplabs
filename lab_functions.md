@@ -1,11 +1,14 @@
-- assume the following formula for calculating the vertical position of an object when it's thrown with some initial speed subject to gravity of the Earth:
-`y=-0.5gt^2+vt`
+note: you will submit the result of the lab to bb at the end. 
 
-create a value returning function that calculates the position of an object at time `t` when the the object is thrown vertically upward with initial velocity `v`. here's the function signature: `double positionUnderGravity(double v,double t)`
+- assume the following formula for calculating the vertical position of an object when it's thrown with some initial speed subject to gravity of the Earth:
+`y=-0.5gt^2+vt` where g=9.8, t represents time, v is initial velicity, and y is vertical position. 
+
+-create a value returning function for this formula that calculates the position of an object at time `t` when the the object is thrown vertically upward with initial velocity `v`. here's the function signature: `double positionUnderGravity(double v,double t)`. put this function above main.
 
 - Call your function with different values and check if the result matches the ones obtained from a calculator.
+- add the prototype of this function above main()  and move  the actual function below main(). 
 
-- now call function with the following values for the 0, 0.1, 0.2 .... 4 for time (t) and the value 20 for initial speed (v) using a for loop. 
+- now call function with the following values t=0, t=0.1, t=0.2 ...., t=4 using a for loop and with the value v=20 for initial speed. 
 
 - add the following header to file:
 `#include <windows.h>`
@@ -21,8 +24,11 @@ this function enables us to print a character at the specified position on conso
 
 - call the gotoxy(...) function to print the phrase " hello" at position (5,5). 
 
-- use the function gotoxy(....)  to draw the path of an object when its thrown with some initial speed 20. 
+- use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
 
-- Convert the value returning functionpositionUnderGravity(...) to a void function.  add an argument called called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
+- convert the value returning function `positionUnderGravity(...)` to a void function.  add an argument called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
+
+- send the value `t` to the function `positionUnderGravity(...)` using a global variable. 
+
 
 
