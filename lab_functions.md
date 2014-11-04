@@ -1,4 +1,4 @@
-note: you will submit the result of the lab to bb at the end. 
+note1: you will submit the result of the lab to bb at the end. 
 
 - assume the following formula for calculating the vertical position of an object when it's thrown with some initial speed subject to gravity of the Earth:
 `y=-0.5gt^2+vt` where g=9.8, t represents time, v is initial velicity, and y is vertical position. 
@@ -22,19 +22,22 @@ void gotoxy( int x, int y )
 }
 ```
 this function enables us to print a character at the specified position on console window.
+if including `windows.h` gives you an error, try visual studio 2013.
 
 - call the gotoxy(...) function to print the phrase " hello" at position (5,5). 
 
 - use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
 hint:
 ```cpp
+	for(double t=0;t<4; t=t+0.1){
 		double loc=positionUnderGravity(20,t);
 		gotoxy(i++,loc); 
 		cout<<"o";
+	}
 ```
 - convert the value returning function `positionUnderGravity(...)` to a void function.  add an argument called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
-- send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practive but I just wanted you to try it.). you can change it back once you try this. 
+- send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practice but I just want you to try it. you can change it back once you try it. )
 
 Additional parts (not mandatory)
 =============
