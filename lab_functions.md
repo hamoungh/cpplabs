@@ -35,6 +35,7 @@ hint:
 		cout<<"o";
 	}
 ```
+- cut  the above code in a separate void function 
 - convert the value returning function `positionUnderGravity(...)` to a void function.  add an argument called `position` to the function. uuse this argument to pass the return value to the caller funtion. modify the main program accordingly.
 
 - send the value `t` to the function `positionUnderGravity(...)` using a global variable. (this is a bad practice but I just want you to try it. you can change it back once you try it. )
