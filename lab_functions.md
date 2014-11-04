@@ -29,7 +29,7 @@ if including `windows.h` gives you an error, try visual studio 2013.
 - use the function gotoxy(....)  to draw the path of an object from t=0 to t=4 when its thrown with some initial speed 20. 
 hint:
 ```cpp
-	for(double t=0;t<4; t=t+0.1){
+	for(......){
 		double loc=positionUnderGravity(20,t);
 		gotoxy(i++,loc); 
 		cout<<"o";
@@ -42,11 +42,18 @@ hint:
 
 Additional parts (not mandatory)
 =============
-- create a function `positionUnderCircularMotion(t)` that returns two values `x`,`y` through 'passing by reference'. 
+- create a function `void positionUnderCircularMotion(double t,double& x,double& y)` that returns two values `x`,`y` through 'passing by reference'. 
 use the formulas:
 ```
-x=20+10*cos(t)
+x=20+10*cos(t);
 y=20+10*sin(t); 
 ```
-to calculate x and y.
+to calculate x and y. 
+note that the argument to sin() and cos() represents an angle and is expressed in radians.
+One radian is equivalent to 180/PI degrees. 
+
+- test your function with some values
+- create a void function called `circle` (i.e. `void circle()`) that generates 100 angles between `0` and `2*Pi` using the formula
+`t = 2 * 3.13 *i / 100;`
+pass these `t` values to `positionUnderCircularMotion` and draw the result. 
 
