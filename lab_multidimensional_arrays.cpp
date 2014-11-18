@@ -21,7 +21,7 @@ and two diagonals.
   }
 
 
-- we need to define how the computer is going to play. We can pick every dummy logic and check the first available empty cell on the board. Write a method called 'get_computer_move(void)' that will search the first available empty cell and puts a O character there.
+- we need to define how the computer is going to play. We can pick every dummy logic and check the first available empty cell on the board. Write a method called 'get_computer_move(void)' that will search the first available empty cell and puts a O character there. 
 
 
 - Use the following main method to test your code:
