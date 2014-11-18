@@ -15,12 +15,11 @@ and two diagonals.
 - test 'isThereAWinner'
 
 - write a method called 'get_player_move' that is going to read the coordinates of the cell that the user wants to place checkmark. Inside the method check if the specified ccell is empty or not using the below conditions:
-''' 
   if(matrix[x][y]!= ' '){
-    printf("Invalid move, try again.\n");
+    cout << "Invalid move, try again."<<endl;
     get_player_move();
   }
-''''
+
 
 - we need to define how the computer is going to play. We can pick every dummy logic and check the first available empty cell on the board. Write a method called 'get_computer_move(void)' that will search the first available empty cell and puts a O character there.
 
@@ -30,8 +29,8 @@ int main(void)
 {
   char done;
 
-  printf("This is the game of Tic Tac Toe.\n");
-  printf("You will be playing against the computer.\n");
+  cout<<"This is the game of Tic Tac Toe."<<endl;
+  cout<<"You will be playing against the computer."<<endl;
 
   done =  ' ';
   initialize_game();
@@ -45,8 +44,8 @@ int main(void)
     done = isThereAWinner(); /* see if winner */
   } while(done== ' ');
 
-  if(done=='X') printf("You won!\n");
-  else printf("I won!!!!\n");
+  if(done=='X') cout<<"You won!"<<endl;
+  else cout<<"I won!!!!"<<endl;
   draw(); /* show final positions */
 
   return 0;
