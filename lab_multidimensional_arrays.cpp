@@ -7,3 +7,9 @@ each cell in the array can take three values space character, X character,  O ch
 
 - create a method called initialize_game that sets all elements of the matrix to space character
 
+- create a method called draw() that will draw the game state in the terminal using simple 'cout <<' 
+
+-  create a method called 'char isThereAWinner()' their returns either O or X or space character (iin case there is no winner).
+The method should check the three rows (you can do this using it for loop that iterates through the rows), and three columns ( again you can do this using a for loop that a iterates over the columns) ,
+and two diagonals. 
+
