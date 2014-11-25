@@ -14,7 +14,7 @@ You need to submit your code to the blackboard at the end of the lab.
 
 -import the namespace std;
 
--in this tutorial the asteroids will be arranged in a grid format. let's assume there are 10 rows and 10 columns of astroids. Define global constants ROWS and COLUMNS (storing number of rows/columns of asteroids) and assign the value 10 to each of one. 
+-in this tutorial the asteroids will be arranged in a grid format. let ussassume there are 10 rows and 10 columns of astroids. Define global constants ROWS and COLUMNS (storing number of rows/columns of asteroids) and assign the value 10 to each of one. 
 
 -declare to float variables xVal and yVal to store the co-ordinates of the spacecraft. set the initial coordinate to (5,5)
 
