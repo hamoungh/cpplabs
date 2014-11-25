@@ -52,19 +52,11 @@ using the following statements (the shape of the astroid will change based on it
 -declare a two-dimensional global array of asteroids:
  asteroid arrayAsteroids[ROWS][COLUMNS];
 
--define the global constant FILL_PROBABILITY and initialize it to 100.
- this is percentage probability that a particular row-column slot will be filled with an asteroid. 
- It should be an integer between 0 and 100.
-
 
 -add a function called 'void setup()' that initializes the global array of astroids using a nested for loop.
-inside the nested for loop you need any for statement to 
-generate a random number between zero and hundred and 
-initialize  each element only if 'rand()%100 >= FILL_PROBABILITY': 
-			if (rand()%100 < FILL_PROBABILITY) 
-			{
-				arrayAsteroids[i][j].initialize( 3*(-COLUMNS/2 + j),  i,  rand()%4);
-			}
+inside the nested for loop use the following statement:
+	arrayAsteroids[i][j].initialize( 3*(-COLUMNS/2 + j),  i,  rand()%4);
+	
 note that the radius of each astroid is also a randomized number between/including zero and three.
 
 -add the drawing routine called 'void drawScene(char ch, char playerCh)' that uses a nested for loop
