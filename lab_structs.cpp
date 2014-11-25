@@ -33,7 +33,8 @@ void gotoxy( int x, int y )
 	SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), p );
 }
 
--write a method called 'void draw()'  that uses calls 'gotoxy(centerX,centerY);' and then draws an astroid using the following statements (the shape of the astroid will change based on it's radius):
+-write a method called 'void draw()'  that uses calls 'gotoxy(centerX,centerY);' and then draws an astroid 
+using the following statements (the shape of the astroid will change based on its radius):
 		switch(radius){
 		case 0:cout << ' '; break; 
 		case 1:couht << '.'; break; 
