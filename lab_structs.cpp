@@ -89,7 +89,7 @@ void main()
 	setup(); 
 	do
 	{
-		drawScene(+');  
+		drawScene('+');  
 		ch = _getch(); 
 		drawScene(' '); 
 		keyInputf(ch); 
