@@ -59,7 +59,7 @@ inside the nested for loop use the following statement:
 	
 note that the radius of each astroid is also a randomized number between/including zero and three.
 
--add the drawing routine called 'void drawScene(char ch, char playerCh)' that uses a nested for loop
+-add the drawing routine called 'void drawScene(char playerCh)' that uses a nested for loop
 to printa astroid by calling its draw method only if its radius is more than zero.
  the method should then print the spaceship using:
 	gotoxy(xVal,yVal);   
@@ -89,9 +89,9 @@ void main()
 	setup(); 
 	do
 	{
-		drawScene('o','+');  
+		drawScene(+');  
 		ch = _getch(); 
-		drawScene(' ',' '); 
+		drawScene(' '); 
 		keyInputf(ch); 
 
 	}while (ch != 'Q' && ch!='q'); 
