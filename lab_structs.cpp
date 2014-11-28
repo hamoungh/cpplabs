@@ -21,7 +21,7 @@ of astroids.
 Define global constants ROWS and COLUMNS (storing number of rows/columns of asteroids) and assign
 the value 10 to each of one. 
 
--declare to float variables xVal and yVal to store the co-ordinates of the spacecraft. set the initial coordinate to (5,5)
+-declare two float variables xVal and yVal to store the co-ordinates of the spacecraft. set the initial coordinate to (5,5)
 
 -declare a struct astroid. 
 
